@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Application Layout</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Layout Grid */
+        body {
+            display: grid;
+            grid-template-rows: 15% auto 10%;
+            grid-template-columns: 1fr;
+            height: 100vh;
+            color: #333;
+        }
+
+        header, footer {
+            text-align: center;
+            padding: 10px;
+            background: linear-gradient(90deg, #ff7e5f, #feb47b);
+            color: white;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: 20% 80%;
+            background: #f0f8ff;
+        }
+
+        .menu {
+            background: linear-gradient(180deg, #83a4d4, #b6fbff);
+            padding: 15px;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .content {
+            padding: 20px;
+            background: white;
+            overflow-y: auto;
+        }
+
+        /* Add some hover effects for the menu */
+        .menu a {
+            display: block;
+            text-decoration: none;
+            color: white;
+            margin: 10px 0;
+            padding: 5px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .menu a:hover {
+            background: rgba(255, 255, 255, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Welcome to Amit Softwares</h1>
+    </header>
+
+    <!-- Main Section -->
+    <main>
+        <nav class="menu">
+            <li><a href="addform.html" target="content">Create</a></li>
+        	<li><a href="searchform.html" target="content">Read</a></li>
+        	<li><a href="fetchform.html" target="content">Update</a></li>
+        	<li><a href="deleteform.html" target="content">Delete</a></li>
+        </nav>
+        <section class="content">
+            <iframe name="content" src="content.html" style="width: 100%; height: 100%; border: none;"></iframe>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+       Thank You!
+    </footer>
+</body>
+</html>
